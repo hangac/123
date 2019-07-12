@@ -93,3 +93,17 @@ def capitalize_words(c):
         raise TypeError(' Not a string')
     else:
         return " ".join((c.title().strip()).split())
+#waypoint10
+def uppercase_lowercase_words(s):
+    if s == ('    '):
+        return ['']
+    elif not isinstance(s, str):
+        raise TypeError('not a string')
+    else:
+        s = s.split()
+        for i in range(len(s)):
+            if i % 2 == 0:
+                s[i] = s[i].upper()
+            else:
+                s[i] = s[i].lower()
+    return ' '.join(s)
